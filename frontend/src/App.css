@@ -45,3 +45,30 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+
+
+.component-grid-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.latest-user-data {
+  background: #73d13d;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.latest-user-data h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.latest-user-data p {
+  margin-bottom: 8px;
+}
+
+.latest-user-data strong {
+  font-weight: bold;
+}

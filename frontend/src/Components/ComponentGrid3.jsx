@@ -7,6 +7,10 @@ import 'react-resizable/css/styles.css';
 const ComponentGrid3 = () => {
     const [latestUserData, setLatestUserData] = useState(null);
 
+    const layoutConfig = [
+        { i: 'item3', x: 0, y: 0, w: 12, h: 6 }
+    ];
+
     useEffect(() => {
         const fetchLatestUserData = async () => {
             try {
@@ -21,7 +25,7 @@ const ComponentGrid3 = () => {
     }, []);
 
     return (
-        <GridLayout className="component-layout-3" cols={12} rowHeight={40} width={1200}>
+        <GridLayout className="component-layout-3" layout={layoutConfig} cols={12} rowHeight={40} width={1200}>
             <div key="item3" style={{ background: '#73d13d' }}>
                 <h2>Latest User Data</h2>
                 {latestUserData && (
