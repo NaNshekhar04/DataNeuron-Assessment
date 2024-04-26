@@ -49,18 +49,17 @@ const ComponentGrid2 = () => {
                 phoneNo: ''
             });
             console.log('Updated');
-            // Handle success, maybe display a success message
         } catch (error) {
             console.error('Error updating user:', error);
-            // Handle error, maybe display an error message
         }
     };
 
     return (
-        <GridLayout className="component-layout-2"  layout={layoutConfig} cols={12} rowHeight={40} width={1200}>
+        <GridLayout className="component-layout-2"  isDraggable={false} layout={layoutConfig} cols={12} rowHeight={40} width={1200}>
             <div key="item2" style={{ background: '#40a9ff' }}>
                 <h1>Update User</h1>
-            <form onSubmit={handleSubmit}>
+                <img src="https://icons.veryicon.com/png/o/miscellaneous/user-interface-flat-multicolor/5751-update-male-profile.png" className="updateuser-img" alt="" />
+            <form className='component-two' onSubmit={handleSubmit}>
                     <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Name" required />
                     <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required />
                     <input type="text" name="designation" value={formData.designation} onChange={handleChange} placeholder="Designation" required />
