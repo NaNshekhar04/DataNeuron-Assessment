@@ -20,7 +20,7 @@ const ComponentGrid2 = () => {
         // Fetch latest user data
         const fetchLatestUserData = async () => {
             try {
-                const response = await axios.get(`http://localhost:4000/api/getLatestUser`);
+                const response = await axios.get(`https://dataneuron-assessment-lvsj.onrender.com/api/getLatestUser`);
                 const latestUserData = response.data.user;
                 setFormData(latestUserData);
             } catch (error) {
@@ -41,7 +41,7 @@ const ComponentGrid2 = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:4000/api/updateUser`, formData);
+            await axios.put(`https://dataneuron-assessment-lvsj.onrender.com/api/updateUser`, formData);
             setFormData({
                 name: '',
                 email: '',

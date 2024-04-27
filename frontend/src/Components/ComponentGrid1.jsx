@@ -24,7 +24,7 @@ const ComponentGrid1 = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:4000/api/addUser', formData);
+            await axios.post('https://dataneuron-assessment-lvsj.onrender.com/api/addUser', formData);
             setFormData({
                 name: '',
                 email: '',

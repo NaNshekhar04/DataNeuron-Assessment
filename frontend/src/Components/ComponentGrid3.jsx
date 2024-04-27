@@ -14,7 +14,7 @@ const ComponentGrid3 = () => {
     useEffect(() => {
         const fetchLatestUserData = async () => {
             try {
-                const response = await axios.get('http://localhost:4000/api/getLatestUser');
+                const response = await axios.get('https://dataneuron-assessment-lvsj.onrender.com/api/getLatestUser');
                 setLatestUserData(response.data.user);
             } catch (error) {
                 console.error('Error fetching latest user data:', error);
