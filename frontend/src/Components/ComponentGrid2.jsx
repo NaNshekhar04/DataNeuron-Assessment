@@ -48,6 +48,7 @@ const ComponentGrid2 = () => {
                 designation: '',
                 phoneNo: ''
             });
+            window.location.reload();
             console.log('Updated');
         } catch (error) {
             console.error('Error updating user:', error);

@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGO_URI)
     });
 
     const corsOptions = {
-        origin: 'https://user-register-6isjk4zct-nanshekhar04s-projects.vercel.app',
+        origin: 'http://localhost:5173',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type', 'Authorization'],
     };
