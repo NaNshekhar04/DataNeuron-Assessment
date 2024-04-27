@@ -4,9 +4,13 @@ async function addUser(req, res) {
     try {
         await User.deleteMany();
         const newUser = new User(req.body);
-        console.log(newUser);
         await newUser.save();
+        // Log execution time
+        const endTime = Date.now();
+        const executionTime = endTime - req.startTime;
+        console.log(`API request executed in ${executionTime} ms`);
         res.status(201).json({ message: "User added successfully", user: newUser });
+
     } catch (error) {
         console.error("Error adding user:", error);
         res.status(500).json({ message: "Failed to add user" });
@@ -29,6 +33,10 @@ async function updateUser(req, res) {
         const updatedUser = await User.findByIdAndUpdate(latestUser._id, updatedUserData, {
             new: true,
         });
+        // Log execution time
+        const endTime = Date.now();
+        const executionTime = endTime - req.startTime;
+        console.log(`API request executed in ${executionTime} ms`);
 
         res.status(200).json({ message: "Latest user updated successfully", user: updatedUser });
     } catch (error) {
@@ -45,6 +53,10 @@ async function getLatestUser(req, res) {
         if (!latestUser) {
             return res.status(404).json({ message: "Latest user not found" });
         }
+        // Log execution time
+        const endTime = Date.now();
+        const executionTime = endTime - req.startTime;
+        console.log(`API request executed in ${executionTime} ms`);
 
         res.status(200).json({ user: latestUser });
     } catch (error) {
