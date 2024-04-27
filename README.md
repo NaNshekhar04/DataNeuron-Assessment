@@ -44,7 +44,7 @@ Allows user to enter there details and add an entry into the database
 ### PUT :- /api/updateUser
 Allows user to update there latest details into the database
 
-* #### AVERAGE API EXECUTION TIME IS 60 ms
+* #### AVERAGE API EXECUTION TIME IS 210 ms
 
 ## Deployment
 
